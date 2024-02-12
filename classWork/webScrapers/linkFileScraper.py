@@ -6,23 +6,21 @@ import os
 archive_url = "http://www.textfiles.com/ufo/"
 
 def get_files():
-    # create response object
     r = requests.get(archive_url)
 
-    # create beautiful-soup object
     soup = bs4.BeautifulSoup(r.content, 'html.parser')
 
     # find all links on web-page
     for item in soup.select('a[href$=html]'):
         href = archive_url + item['href']
         download_links(href)
-    print("All tales downloaded!")
+    print("All stories downloaded!")
     # ebb: After class I realized the print line indicating
     # all files downloaded needed to go after THIS loop finished.
     # Do you see why it makes sense and works here?
     # Hint: it has to do with when we call the function download_links(href)
 def download_links(href):
-    # obtain filename by splitting url and getting last string
+
     file_name = href.split('/')[-1]
     print("Downloading file: " + file_name)
 
@@ -31,7 +29,7 @@ def download_links(href):
 
     workingDir = os.getcwd()
     print("current working directory: " + workingDir)
-    fileDeposit = os.path.join(workingDir, 'UFO', file_name)
+    fileDeposit = os.path.join(workingDir, 'wearenotAlone', file_name)
     print(fileDeposit)
 
 
