@@ -3,7 +3,7 @@ import requests
 import os
 
 # ebb: This variable stores the website address that you want to scrape.
-archive_url = "https://gutenberg.ca/ebooks/lewiscs-thelionthewitchandthewardrobe/lewiscs-thelionthewitchandthewardrobe-00-h.html"
+archive_url = "http://www.textfiles.com/ufo/"
 
 def get_files():
     # create response object
@@ -31,7 +31,7 @@ def download_links(href):
 
     workingDir = os.getcwd()
     print("current working directory: " + workingDir)
-    fileDeposit = os.path.join(workingDir, 'narnia', file_name)
+    fileDeposit = os.path.join(workingDir, 'UFO', file_name)
     print(fileDeposit)
 
 

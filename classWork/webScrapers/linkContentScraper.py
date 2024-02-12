@@ -4,7 +4,7 @@ import os
 
 # ebb: This variable stores the website address that you want to scrape.
 # archive_url = "https://www.simplyscripts.com/c.html"
-archive_url = "https://gutenberg.ca/ebooks/lewiscs-thelionthewitchandthewardrobe/lewiscs-thelionthewitchandthewardrobe-00-h.html"
+archive_url = "http://www.textfiles.com/ufo/"
 def get_linkContents():
     # create response object
     r = requests.get(archive_url)
@@ -24,7 +24,7 @@ def get_linkContents():
     print(linkText)
     download_toFile(linkText)
     return
-
+for item in soup.select('TD[ALIGN="TOP"]')
 def download_toFile(linkText):
     # We are just planning to output one file only here.
     file_name = "outputLinkText.txt"
