@@ -1,0 +1,17 @@
+Steps to Reg Movie Edits
+ctrl+f
+Search for & Replace with &amp;
+Search for < Replace with &lt;
+Search for > Replace with &gt;
+.+ Replace with <movie>\0</movie>
+<movie>.+\t Replace with <movie>\0</movie>
+(<movie>)(.+?)\t Replace with \1<title>\2</title>
+(</title>)(.+?)\t Replace with \1<year>\2</year>
+(</year>)(.+?)\t Replace with \1<country>\2</country>
+(</country>)(.+?\s)min Replace with \1<runTime unit="min">\2</runTime>
+(Adjusted the first line to <runTime unit="min">runtime</runTime>)
+Save as XML Reopen file
+ctrl+a
+ctrl+e
+xml
+Pretty Print
