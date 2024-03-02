@@ -1,0 +1,17 @@
+Steps to Regex Dracula Edits
+
+Fine & and Replace with &amp;
+Find \n\n Replace with \n
+Find (^.+$) Replace with <p> \0 </p>
+Find <p> (CHAPTER [IVLXMC]+) </p> Replace with <heading> \1 </heading>
+Find <heading> Replace with </chapter> <chapter> <heading>
+Adjust code slightly to fix the chapters
+Find (".+?") Replace with <q> (\1) </q>
+Find \"?(\d(-))?(\d+ (January|February|March|April|May|June|July|August|September|October|November|December))[\.|,]? Replace with <date>\0</date>
+Find â€™ Replace with '
+Find â€ Replace with -
+Find (\d\d?):(\d\d) (([aApP]\. [mM]\.)?)|(\d\d? [aApP]\. [mM]\.)|(\d?\d:\d\d) Replace with <time> \0 </time>
+ctrl+a -> ctrl+e add book around all of the text
+Then pretty print
+
+- Adjusted the date code after I thought I was done due to some missing dates.
