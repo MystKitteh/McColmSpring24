@@ -1,6 +1,7 @@
 ### Steps to Regex Dracula Edits 
+
 | Find      | Replace |
-| :--------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------: |
+| :-----------: | :-----------: |
 | &    | ```&amp;```       |
 | ```\n\n```   | ```\n```        |
  |  (^.+$)  |  ```<p> \0 </p>```       |
@@ -12,6 +13,7 @@
 |  â€  |     -    |
 |  ```(\d\d?):(\d\d) (([aApP]\. [mM]\.)?)|(\d\d? [aApP]\. [mM]\.)|(\d?\d:\d\d)```  |     ```<time> \0 </time>```    |
 
+<i> The chart doesn't show all of the code when viewing the preview on github, please view the code on the Code tab!
 
 <i>Adjust code slightly to fix the chapters
 
