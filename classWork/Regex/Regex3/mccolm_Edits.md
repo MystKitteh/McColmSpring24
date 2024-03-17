@@ -2,8 +2,8 @@
 
 | Find      | Replace |
 | :-----------: | :-----------: |
-| &    | ```&amp;```       |
-| ```\n\n```   | ```\n```        |
+| ```(<!doctype html>\n*)?(</?)ht(ml>)```    | ```\2x\3```       |
+| ```<!doctype html>```   | ``` ```        |
  |  (^.+$)  |  ```<p> \0 </p>```       |
   |  ```<p> (CHAPTER [IVLXMC]+) </p>```  | ```<heading> \1 </heading>```        |
  | ```<heading>```   |  ```</chapter> <chapter> <heading>```       |
